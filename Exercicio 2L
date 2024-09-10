@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    // Declaração das variáveis
+    int valor_total;
+    int notas100, notas50, notas10, notas5, notas1;
+
+    // Entrada de dados: valor total
+    printf("Digite o valor total em reais: ");
+    scanf("%d", &valor_total);
+
+    // Cálculo da quantidade mínima de notas
+    notas100 = valor_total / 100;  // Quantidade de notas de 100 reais
+    valor_total = valor_total % 100; // Resto
+
+    notas50 = valor_total / 50;  // Quantidade de notas de 50 reais
+    valor_total = valor_total % 50; // Resto
+
+    notas10 = valor_total / 10;  // Quantidade de notas de 10 reais
+    valor_total = valor_total % 10; // Resto
+
+    notas5 = valor_total / 5;  // Quantidade de notas de 5 reais
+    valor_total = valor_total % 5; // Resto
+
+    notas1 = valor_total;  // Quantidade de notas de 1 real (resto)
+
+    // Exibindo a quantidade de cada nota
+    printf("Notas de 100 reais: %d\n", notas100);
+    printf("Notas de 50 reais: %d\n", notas50);
+    printf("Notas de 10 reais: %d\n", notas10);
+    printf("Notas de 5 reais: %d\n", notas5);
+    printf("Notas de 1 real: %d\n", notas1);
+
+    return 0;
+}
