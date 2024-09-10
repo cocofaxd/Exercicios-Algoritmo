@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    // Declaração das variáveis
+    float P, V, T, M;
+
+    // Entrada de dados
+    printf("Digite a pressão do pneu (P): ");
+    scanf("%f", &P);
+
+    printf("Digite o volume do pneu (V): ");
+    scanf("%f", &V);
+
+    printf("Digite a temperatura do pneu (T): ");
+    scanf("%f", &T);
+
+    // Cálculo da massa de ar usando a fórmula PV = 0.37 * M * (T + 460)
+    M = (P * V) / (0.37 * (T + 460));
+
+    // Exibindo o resultado
+    printf("A massa de ar do pneu é: %.2f\n", M);
+
+    return 0;
+}
