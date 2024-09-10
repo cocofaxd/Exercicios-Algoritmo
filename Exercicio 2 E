@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h> // Para usar a função ceil
+
+int main() {
+    double areaParede;         // Área da parede em metros quadrados
+    double coberturaPorLata;   // Cobertura de uma lata de tinta em metros quadrados
+    int latasNecessarias;      // Número de latas necessárias
+
+    // Definir a cobertura da tinta
+    coberturaPorLata = 10.0; // Cada lata cobre 10 metros quadrados
+
+    // Pergunta a área da parede
+    printf("Digite a área da parede em metros quadrados: ");
+    scanf("%lf", &areaParede);
+
+    // Calcula a quantidade de latas necessárias
+    latasNecessarias = (int)ceil(areaParede / coberturaPorLata);
+
+    // Imprime o número de latas necessárias
+    printf("Você precisará de %d lata(s) de tinta para pintar a parede.\n", latasNecessarias);
+
+    return 0;
+}
