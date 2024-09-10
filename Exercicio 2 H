@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    // Declaração das variáveis
+    int primeiro_termo, razao, N, enesimo_termo;
+
+    // Entrada de dados
+    printf("Digite o primeiro termo da PA: ");
+    scanf("%d", &primeiro_termo);
+
+    printf("Digite a razão da PA: ");
+    scanf("%d", &razao);
+
+    printf("Digite o valor de N (o termo a ser calculado): ");
+    scanf("%d", &N);
+
+    // Cálculo do N-ésimo termo usando a fórmula: enesimo_termo = primeiro_termo + (N - 1) * razao
+    enesimo_termo = primeiro_termo + (N - 1) * razao;
+
+    // Exibindo o resultado
+    printf("O %d-ésimo termo da PA é: %d\n", N, enesimo_termo);
+
+    return 0;
+}
