@@ -1,0 +1,7 @@
+#include <stdio.h>
+
+int main() {
+    printf("%d ", 4);  // Adiciona um espaço após o número 4
+    printf("%d\n", 2); // Adiciona uma nova linha após o número 2
+    return 0;
+}
