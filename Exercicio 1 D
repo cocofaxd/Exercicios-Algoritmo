@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main() {
+    int a;
+    scanf("%d", &a);  // Passa o endereço da variável 'a'
+    printf("%d\n", a); // Imprime o valor armazenado em 'a' e adiciona uma nova linha
+    return 0;
+}
