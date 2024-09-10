@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <math.h> // Para usar a constante M_PI
+
+int main() {
+    double raio;  // Variável para armazenar o raio do círculo
+    double area;  // Variável para armazenar a área do círculo
+
+    // Pergunta o raio do círculo
+    printf("Digite o raio do círculo: ");
+    scanf("%lf", &raio);
+
+    // Calcula a área do círculo
+    area = M_PI * raio * raio;
+
+    // Imprime a área do círculo
+    printf("A área do círculo com raio %.2f é %.2f\n", raio, area);
+
+    return 0;
+}
