@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main() {
+    int a = 10; // Inicializando a variável 'a' com um valor
+    printf("%d\n", a); // Imprimindo o valor de 'a'
+    return 0;
+}
+
