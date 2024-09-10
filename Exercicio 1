@@ -1,0 +1,11 @@
+  Exercício 1 
+
+A) Código Corrigido
+
+#include <stdio.h>
+
+int main() {
+    long long n = 4000000000LL; // Use 'LL' para indicar que é um literal 'long long'
+    printf("%lld\n", n);       // Use %lld para imprimir um 'long long'
+    return 0;
+}
