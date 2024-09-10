@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    char nome[100]; // Buffer para armazenar o nome do usuário
+
+    // Passo 1: Pergunta o nome do usuário
+    printf("Olá eu sou o Nº 1, como é seu nome?\n");
+
+    // Passo 2: Lê o nome do usuário
+    // %99s é utilizado para limitar o número de caracteres lidos e evitar overflow
+    scanf("%99s", nome);
+
+    // Passo 3: Escreve a mensagem de boas-vindas
+    printf("Bem-vindo ao clube %s!\n", nome);
+
+    return 0;
+}
