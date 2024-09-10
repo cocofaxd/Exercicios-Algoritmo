@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    char nome[100];  // Buffer para armazenar o nome do usuário
+    int idade;       // Variável para armazenar a idade do usuário
+
+    // Pergunta o nome do usuário
+    printf("Qual é o seu nome?\n");
+    scanf("%99s", nome);
+
+    // Pergunta a idade do usuário
+    printf("Qual é a sua idade?\n");
+    scanf("%d", &idade);
+
+    // Calcula o número aproximado de dias de vida
+    int diasDeVida = idade * 365; // Assume que todos os anos têm 365 dias
+
+    // Imprime a mensagem com o nome e o número de dias de vida
+    printf("Olá, %s! Você tem aproximadamente %d dias de vida.\n", nome, diasDeVida);
+
+    return 0;
+}
