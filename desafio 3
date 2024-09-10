@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main() {
+    // Preços médios das ações
+    float preco_acao1 = 24.13;
+    float preco_acao2 = 11.00;
+    float preco_acao3 = 38.65;
+
+    // Dividendos pagos por unidade de ação
+    float dividendo_acao1 = 17.00;
+    float dividendo_acao2 = 35.00;
+    float dividendo_acao3 = 25.00;
+
+    // Quantidade de dinheiro disponível
+    float aporte = 1000.00;
+
+    // Variáveis para quantidade de ações adquiridas
+    int qtd_acao1, qtd_acao2, qtd_acao3;
+
+    // Cálculo da quantidade de ações que podem ser compradas com o valor aportado
+    printf("Com o aporte de R$1000,00, insira quantas ações deseja comprar:\n");
+
+    // Pergunta quantas ações o usuário deseja comprar de cada tipo
+    printf("Quantas unidades de Ação 1 deseja comprar (R$ %.2f/unidade)? ", preco_acao1);
+    scanf("%d", &qtd_acao1);
+
+    printf("Quantas unidades de Ação 2 deseja comprar (R$ %.2f/unidade)? ", preco_acao2);
+    scanf("%d", &qtd_acao2);
+
+    printf("Quantas unidades de Ação 3 deseja comprar (R$ %.2f/unidade)? ", preco_acao3);
+    scanf("%d", &qtd_acao3);
+
+    // Verifica se o total a ser investido não ultrapassa o aporte disponível
+    float total_investido = (qtd_acao1 * preco_acao1) + (qtd_acao2 * preco_acao2) + (qtd_acao3 * preco_acao3);
+
+    if (total_investido > aporte) {
+        printf("O total a ser investido (R$ %.2f) ultrapassa o valor disponível de R$ 1000,00. Ajuste a quantidade de ações.\n", total_investido);
+    } else {
+        // Calcula o Dividend Yield (D.Y.) de cada ação
+        float dy_acao1 = (dividendo_acao1 / preco_acao1) * 100;
+        float dy_acao2 = (dividendo_acao2 / preco_acao2) * 100;
+        float dy_acao3 = (dividendo_acao3 / preco_acao3) * 100;
+
+        // Exibe os resultados
+        printf("\nCom as quantidades inseridas, o total investido foi de R$ %.2f.\n", total_investido);
+        printf("Dividend Yield da Ação 1: %.2f%%\n", dy_acao1);
+        printf("Dividend Yield da Ação 2: %.2f%%\n", dy_acao2);
+        printf("Dividend Yield da Ação 3: %.2f%%\n", dy_acao3);
+    }
+
+    return 0;
+}
